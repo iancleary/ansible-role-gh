@@ -2,5 +2,10 @@
 - name: Converge
   hosts: all
 
+  pre_tasks:
+    - name: Install github3.py python package.
+      ansible.builtin.pip:
+        name: github3.py
+
   roles:
     - role: iancleary.gh
