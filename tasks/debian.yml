@@ -6,6 +6,11 @@
     action: latest_release
   register: gh_latest
 
+- name: Install git dependency
+  become: true
+  ansible.builtin.apt:
+    name: git
+
 - name: Install Github CLI deb from github (Specific Version)
   become: true
   ansible.builtin.apt:
