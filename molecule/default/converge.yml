@@ -9,3 +9,5 @@
 
   roles:
     - role: iancleary.gh
+      variable:
+        gh_version: 2.25.1
